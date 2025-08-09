@@ -2,37 +2,33 @@
 # 🌦 Weather App
 
 A simple weather application that fetches real-time weather data using the OpenWeatherMap API.  
-Built with **HTML, CSS, JavaScript (Frontend)** and **Node.js + Express (Backend)** to keep the API key safe using a `.env` file.
+Built with **HTML, CSS, JavaScript** and styled with a clean glassmorphism UI.
 
 ## 📌 Features
-- Search weather by city name.
-- Displays:
-  - Temperature (°C)
-  - Weather condition with icon
-  - Wind speed
-  - Location (city & country)
-- Glassmorphism UI design.
-- Backend hides the API key using environment variables.
+- Search for weather by city name.
+- Shows:
+  - 🌡 Temperature in Celsius
+  - 🌤 Weather description
+  - 💨 Wind speed
+  - 📍 Location (City & Country)
+  - Weather icon
+- Glassmorphism card design.
 
 ## 🛠 Tech Stack
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Node.js, Express
-- **API**: [OpenWeatherMap API](https://openweathermap.org/api)
-- **Env Management**: dotenv
+- HTML
+- CSS
+- JavaScript (Vanilla)
+- [OpenWeatherMap API](https://openweathermap.org/api)
 
 ## 📂 Project Structure
 ```
 
 weather-app/
 │
-├── public/
-│   ├── index.html
-│   ├── script.js
-│   └── style.css   # (optional, or inline CSS in HTML)
-│
-├── server.js
-├── .env
-├── package.json
+├── index.html
+├── script.js
+├── style.css   # (optional, or inline CSS in HTML)
+├── .env        # stores your API key (used by bundler)
 └── README.md
 
 ````
@@ -45,7 +41,7 @@ git clone https://github.com/your-username/weather-app.git
 cd weather-app
 ````
 
-### 2. Install dependencies
+### 2. Install dependencies (if using a bundler like Vite or Parcel)
 
 ```bash
 npm install
@@ -54,42 +50,34 @@ npm install
 ### 3. Get an API Key
 
 * Sign up at [OpenWeatherMap](https://openweathermap.org/api)
-* Generate a free API key.
+* Create a free API key.
 
-### 4. Create `.env` file
+### 4. Add your API key
+
+Create a `.env` file:
 
 ```env
-WEATHER_KEY=your_api_key_here
+VITE_WEATHER_KEY=your_api_key_here
 ```
 
-### 5. Run the server
+> ⚠️ For Vite, variable names must start with `VITE_`.
+
+### 5. Run the project
+
+If using **Vite**:
 
 ```bash
-node server.js
+npm run dev
 ```
 
-The app will be running at:
+### 6. Open in Browser
+
+Visit:
 
 ```
-http://localhost:3000
+http://localhost:5173
 ```
-
-## 📷 Screenshot
-
-*(Add your app screenshot here)*
-
-## 🚀 Deployment
-
-You can deploy this app on:
-
-* [Render](https://render.com/)
-* [Vercel](https://vercel.com/) (for backend + frontend)
-* [Railway](https://railway.app/)
-
-Make sure to set `WEATHER_KEY` in your hosting platform's environment variables.
 
 ## 📜 License
 
-MIT License. Feel free to use and modify.
-
-
+MIT License. Free to use and modify.
